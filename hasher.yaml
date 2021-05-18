@@ -8,6 +8,9 @@ spec:
     matchLabels:
       app: hasher
   template:
+    metadata:
+      labels:
+        app: hasher
     spec:
       containers:
         - name: hasher

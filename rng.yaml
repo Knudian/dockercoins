@@ -8,6 +8,9 @@ spec:
     matchLabels:
       app: rng
   template:
+    metadata:
+      labels:
+        app: rng
     spec:
       containers:
         - name: rng

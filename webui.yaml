@@ -1,17 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rng
+  name: webui
   namespace: dockercoins
 spec:
   selector:
     matchLabels:
       app: rng
   template:
+    metadata:
+      labels:
+        app: webui
     spec:
       containers:
         - name: rng
-          image: dockercoins/rng:v0.1
+          image: dockercoins/webui:v0.1
           ports:
             - containerPort: 80
               name: http
@@ -20,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: rng
+  name: webui
   namespace: dockercoins
 spec:
   type: NodePort

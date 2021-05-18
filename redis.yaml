@@ -8,6 +8,9 @@ spec:
     matchLabels:
       app: redis
   template:
+    metadata:
+      labels:
+        app: redis
     spec:
       containers:
         - name: redis
