@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: rng
+      app: webui
   template:
     metadata:
       labels:
